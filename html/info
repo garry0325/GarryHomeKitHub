@@ -1,0 +1,8 @@
+{
+	"temperature": "30.0",
+	"tarTemperature": "26.0",
+	"heatThreshold": "29.0",
+	"coolThreshold": "23.0",
+	"humidity": "78.0",
+	"units": 0
+}

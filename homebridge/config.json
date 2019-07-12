@@ -1,0 +1,131 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "CC:22:3D:E3:CE:30",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+    
+    "accessories": [
+	{
+		"accessory": "HttpTemphum",
+		"name": "Bedroom Sensor",
+		"temperature_name": "Temperature",
+		"humidity_name": "Humidity",
+		"url": "http://localhost:80/roomSensor/roomSensor.json",
+		"httpMethod": "GET",
+		"manufacturer": "Aosong Electronics Co.,Ltd",
+		"serial": "DHT22",
+		"model": "Temperature & Humidity Sensor",
+		"humidity": true 
+	},
+	{
+		"accessory": "HttpLux",
+		"name": "Bedroom",
+		"lux_name": "Brightness",
+		"url": "http://localhost:80/roomSensor/roomSensor.json",
+		"http_method": "GET",
+		"field_name": "lux",
+		"manufacturer": "ROHM Semiconductor",
+		"serial": "BH1750FVI",
+		"model": "Ambient Light Sensor"
+	},
+	{
+		"accessory": "Httpairquality",
+		"name": "Air Quality",
+		"url": "http://localhost:80/roomSensor/roomSensor.json",
+		"http_method": "GET",
+		"manufacturer": "Figaro",
+		"serial": "TGS2602",
+		"model": "VOC Air Sensor"
+	},
+	{
+		"accessory": "HTTP-SWITCH",
+		"name": "Bedroom Light",
+		"httpMethod": "GET",
+		"onUrl": "http://192.168.0.122:80/light?on=1",
+		"offUrl": "http://192.168.0.122:80/light?on=0",
+		"statusUrl": "http://192.168.0.122:80/light?on=2",
+		"manufacturer": "B&Q",
+		"serial": "EnergySaver LED T8",
+		"model": "LED Light Tube"
+	},
+	
+	{
+		"accessory": "Http",
+		"name": "Table Lamp",
+		"switchHandling": "yes",
+		"http_method": "GET",
+		"on_url": "http://192.168.0.126:80/lamp/on",
+		"off_url": "http://192.168.0.126:80/lamp/off",
+		"status_url": "http://192.168.0.126:80/lamp",
+		"service": "Light",
+		"brightnessHandling": "yes",
+		"brightness_url": "http://192.168.0.126:80/lamp?lightness=%b",
+		"brightnesslvl_url": "http://192.168.0.126:80/lamp/lightness",
+		"sendimmediately": "",
+		"manufacturer": "Arcadiatek",
+		"serial": "A60 7W 3000K E27",
+		"model": "LED Dimmable Light Bulb"
+	},
+
+
+
+	{
+		"accessory": "HTTP-SWITCH",
+		"name": "LivingRoom Light",
+		"httpMethod": "GET",
+		"onUrl": "http://192.168.0.123:80/light?on=1",
+		"offUrl": "http://192.168.0.123:80/light?on=0",
+		"statusUrl": "http://192.168.0.123:80/light?on=2",
+		"manufacturer": "",
+		"serial": "",
+		"model": "LED Light Tube"
+	},
+	{
+		"accessory": "HTTP-SWITCH",
+		"name": "Dining Light",
+		"httpMethod": "GET",
+		"onUrl": "http://192.168.0.125:80/light?on=1",
+		"offUrl": "http://192.168.0.125:80/light?on=0",
+		"statusUrl": "http://192.168.0.125:80/light?on=2",
+		"manufacturer": "",
+		"serial": "",
+		"model": "LED Light Tube"
+	},
+
+
+
+	
+	{
+		"accessory": "HTTP-SWITCH",
+		"name": "Paul's Light",
+		"httpMethod": "GET",
+		"onUrl": "http://192.168.0.124:80/light?on=1",
+		"offUrl": "http://192.168.0.124:80/light?on=0",
+		"statusUrl": "http://192.168.0.124:80/light?on=2",
+		"manufacturer": "",
+		"serial": "",
+		"model": "LED Light Tube"
+	},
+
+
+	{
+		"accessory": "RaspberryPiTemperature",
+		"name": "RPi Temperature",
+		"updateInterval": 60000
+	},
+	{
+		"accessory": "Httpairquality",
+		"name": "Bedroom",
+		"url": "http://localhost:80/roomSensor/battery.php",
+		"http_method": "GET",
+		"manufacturer": "Arduino",
+		"serial": "Pro Micro",
+		"model": "Single-Board Computer"
+	}
+    ],
+
+    "platforms": [
+    ]
+}
